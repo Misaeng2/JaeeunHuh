@@ -1,0 +1,726 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="icon" href="img/favicon.png">
+
+    <title>홈</title>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- scroller-roll -->
+    <script type="text/javascript" src="js/scroller_roll.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@500&display=swap');
+
+      body{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 18px;
+        background: url(img/01_index/section-text-1.jpg) center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      *{
+        /*border: 1px solid red;*/
+      }
+      /*------------------ customizing CSS ------------------*/
+
+
+
+
+      /*------------------ 네비게이션 바 ------------------*/
+      nav{
+        font-size: 15px;
+        height: 60px;
+      }
+      a.nav-link{
+        color: darkgray;
+      }
+      a.nav-link:hover{
+        color: gray;
+      }
+      .navbar-light.navbar-nav.active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+        color: #51A9FE;
+      }
+      nav input.form-control::placeholder {
+        font-size: 12px;
+        text-align: center;
+      }
+
+
+      /*------------------ mine ------------------*/
+      .mine{
+        margin-top: 30px;
+        padding: 40px 0;
+        background-color: #F7F9F9;
+      }
+      .mine-study.col-md-6, .mine-goal.col-md-6{
+        margin-top: 40px;
+      }
+      .mine-study-body, .mine-goal-body{
+        padding: 20px 15px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        font-size: 12px;
+        background-color: white;
+        height: 120px;
+      }
+      .mine .mine-goal-record-gauge-wrap{
+        margin-top: 15px;
+      }
+      .wrapper>hr{
+        margin-top: 0;
+      }
+
+      .mine .mine-study-body.col{
+        background-color: white;
+        margin: 0 15px;
+      }
+      .mine .mine-study-body .mine-study-body-text{
+        color: white;
+        z-index: 1;
+        position: relative;
+        text-align: center;
+        margin-top: 40px;
+        display: block;
+      }
+      .mine .mine-study-body.col:first-child{
+        background: url(img/02_home/study.jpg) center no-repeat;
+        background-size: cover;
+        height: 120px;
+      }
+      .mine .mine-study-body.col:hover{
+        background-size: 110% ;
+        cursor: pointer;
+      }
+      .mine .mine-study-body.col .study-item-list-wrap{
+        margin-top: 20px;
+      }
+      .mine .mine-study-body.col::before{
+        content: "";
+        opacity: 0.4;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: #000;
+        border-radius: 5px;
+      }
+      .mine .mine-study-body.col:last-child{
+        background: #383838;
+        border-radius: 5px;
+        color: white;
+      }
+
+
+      /*---------------- ranking ----------------*/
+      .vert .carousel-item-next,
+      .vert .active.carousel-item-right {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100% 0);
+      }
+
+      .vert .carousel-item-prev,
+      .vert .active.carousel-item-left {
+        -webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+      }
+      .ranking {
+        font-size: 12px;
+        margin-top: 100px;
+      }
+      .ranking .row{
+        padding: 8px 18px;
+      }
+      .ranking hr{
+        margin: 0;
+      }
+      .ranking .border {
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 5px;
+        background-color: white;
+        box-shadow: 1px 3px 5px -3px rgb(0 0 0/0.2);;
+      }
+      /*------------------ studies ------------------*/
+      /*tab*/
+      .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+        background-color: #51A9FE;
+      }
+
+      .studies{
+        margin-top: 60px;
+        padding: 40px 0;
+      }
+      .studies a{
+        color: dimgray;
+      }
+      /*card style*/
+      .card .card-body{
+        font-size: 0.6em;
+        font-weight: lighter;
+        width: 90%;
+        background-color: white;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0/0.1);
+        border-radius: 2rem;
+        border: none;
+        margin: 0 auto;
+        position: relative;
+        top: -3em;
+      }
+      .card{
+        border: none;
+        background-color: transparent;
+      }
+      .card img{
+        box-shadow: 0 10px 15px -3px rgb(0 0 0/0.2);
+      }
+      .card-title{
+        font-size: 18px;
+      }
+      
+
+      /*------------------ universities ------------------*/
+      .universities{
+        margin: 100px 0;
+      }
+      .universities .scroller_wrapper{
+        margin-top: 30px;
+      }
+      .scroller_roll1, .scroller_roll2{
+        padding: 0px;
+        margin: 30px 0px;
+        overflow: hidden;
+      }
+      .scroller_roll1 ul, .scroller_roll2 ul{
+        padding: 0px;
+        margin: 0px;
+        float: left;
+        width: 100%;
+      }
+      .scroller_roll1 ul li, .scroller_roll2 ul li{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        float: left;
+        text-align: center;
+        display:inline;
+      }
+      .scroller_roll1 ul li a, .scroller_roll2 ul li a{
+        text-decoration: none;
+      }
+      .scroller_roll1 ul li a:hover, .scroller_roll2 ul li a:hover{
+        text-decoration: underline;
+      }
+      .scroller_roll1 ul li a img, .scroller_roll2 ul li a img{
+        border: none;
+      }
+
+
+      /*------------------ footer ------------------*/
+      footer{
+        padding-bottom: 100px;
+        color: gray;
+        background-color: #F7F9F9;
+      }
+      footer>.container{
+        margin-top: 50px;
+      }
+      footer span{
+        font-size: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper" id="myAffix">
+
+      <!------------------ 네비게이션 ------------------>
+
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="GooroomeeCode" width="90px"><span class="sr-only">Gooroomee</span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav col d-flex justify-content-between">
+                <li class="nav-item active">
+                  <a class="nav-link" href="home.html">홈<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="http://localhost:8080/BBS/login.jsp">스터디</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="studylog.html">공부기록</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="shop.html">구룸 결제</a>
+                </li>
+                <li class="nav-item">
+                  <form class="form-inline">
+                    <input class="form-control col mr-sm-2 rounded-pill small input-sm quicksearch" type="search" placeholder="스터디 검색" aria-label="Search" style="width: 250px;" onkeyup="if(window.event.keyCode==13){(addFunc()}">
+                  </form>
+                </li>
+                <li class="nav-item nav-item-login">
+                  <a class="nav-link" href="http://localhost:8080/BBS/login.jsp">로그인</a>
+                </li>
+                <li class="nav-item nav-item-register">
+                  <a class="nav-link" href="http://localhost:8080/BBS/join.jsp">회원가입</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    이용 가이드
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">가입/로그인</a>
+                    <a class="dropdown-item" href="guide/studystart.html">스터디 시작</a>
+                    <a class="dropdown-item" href="#">구룸 결제</a>
+                    <a class="dropdown-item" href="guide/updatequestion.html">자주묻는 질문</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="http://localhost:8080/BBS/login.jsp">1:1 상담문의</a>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div> 
+        </nav>
+      </header>
+
+      <!------------------ mine ------------------>
+      <section class="mine">
+        <div class="container">
+          <div class="mine-contents row">
+            <article class="mine-study col-md-6">
+              <div class="mine-study-header d-flex justify-content-between">
+                <h6 class="mine-study-title">내 스터디</h6>
+                <button class="btn btn-sm btn-secondary badge-pill h6">설정</button>
+              </div>
+              <div class="row">
+                <!-- <div class="mine-study-body col p-0">
+                  <div class="mine-study-body-text">
+                    <p class="h6">화면공유 자율학습방</p>
+                    <p>#자율</p>
+                  </div>
+                </div> -->
+                <div class="mine-study-body col">
+                  <div class="study-item-list-wrap text-center">
+                    내 스터디는 내가 만든 스터디 <br>
+                    또는 초대 받은 스터디가 등록됩니다.
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="mine-goal col-md-6">
+              <div class="mine-goal-header d-flex justify-content-between">
+                <h6 class="mine-goal-title">내 목표</h6>
+                <a href="studylog.html"><button class="btn btn-sm btn-secondary badge-pill h6">설정</button></a>
+              </div>
+              <div class="mine-goal-body">
+                <div class="mine-goal-record-header">
+                  <h6 class="mine-goal-record-tx title">
+                    오늘 공부한 시간 / 내 목표 시간
+                  </h6>
+
+                </div>
+                <div class="mine-goal-record-body">
+                  <p class="mine-goal-record-tx time d-inline">
+                    0시간 00분
+                  </p>
+                  <p class="mine-goal-record-tx total d-inline">
+                    / 0시간 00분
+                  </p>
+                </div>
+                <div class="mine-goal-record-gauge-wrap">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section> <!-- mine section -->
+        <hr>
+        <!------------------ banner ------------------>
+        <section class="banner">
+          <div class="container">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="#"><img src="img/02_home/banner1.png" class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                  <a href="#"><img src="img/02_home/banner2.png" class="d-block w-100" alt="..."></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!------------------ ranking ------------------>
+        <section class="ranking">
+          <div class="container">
+            <div class="row">
+              <div class="mx-auto">
+                <h1>누적 공부 시간 랭킹</h1>
+                <p class="text-center text-muted">2022.04.13(월) 오전 06:00 기준</p>
+              </div><!-- mx-auto -->
+            </div><!-- row -->
+            <div class="border">
+              <div class="row">
+                <div class="col-2">등수</div>
+                <div class="col-3">닉네임</div>
+                <div class="col-3">공부시간</div>
+              </div>
+              <hr>
+              <div id="carouselExampleControls" class="carousel vert slide" data-ride="carousel" data-interval="2000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dice-1-fill" viewBox="0 0 16 16">
+                        <path d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3zm5 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                      </svg> 1위</div>
+                      <div class="col-3">김일등</div>
+                      <div class="col-3 text-muted">22:29:57</div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dice-2-fill" viewBox="0 0 16 16">
+                        <path d="M0 3a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3zm5.5 1a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zm6.5 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                      </svg> 2위</div>
+                      <div class="col-3">김이등</div>
+                      <div class="col-3 text-muted">20:48:05</div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dice-3-fill" viewBox="0 0 16 16">
+                        <path d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3zm2.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                      </svg> 3위</div>
+                      <div class="col-3">김삼등</div>
+                      <div class="col-3 text-muted">17:07:21</div>
+                    </div>
+                  </div>
+                </div><!-- carousel-inner -->
+              </div><!-- carousel -->
+              <hr>
+              <div class="row text-muted ml-1">
+                로그인 후 내 공부 시간 랭킹을 확인해보세요
+              </div>
+            </div>
+          </div><!-- container -->
+        </section>
+
+
+
+        <!------------------ studies ------------------>
+        <section class="studies">
+          <div class="container text-center">
+            <div class="container my-10">
+              <div class="row">
+                <div class="mx-auto">
+                  <h1>실시간 상위 스터디</h1>
+                  <p>강력 추천하는 베스트 스터디</p>
+                </div>
+              </div><!-- row -->
+            </div><!-- container -->  
+            <div class="row mx-10 px-5">
+              <!-- tabs nav -->
+              <!-- Nav tabs -->
+              <div class="col-12">
+                <ul class="nav nav-pills justify-content-center" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active rounded-pill" data-toggle="tab" href="#home">인기 스터디</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link rounded-pill" data-toggle="tab" href="#menu1">신규 스터디</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link rounded-pill" data-toggle="tab" href="#menu2">대회</a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- Tab panes -->
+              <div class="tab-content col-12">
+                <div id="home" class="tab-pane block active"><br>
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="col mb-4">
+                      <a href="https://us05web.zoom.us/j/84389766703?pwd=ZWVZU1BZMGtEdlBGS2F0cDdwZS9oUT09">
+                        <div class="card">
+                          <img src="img/02_home/jungbo.png" class="card-img-top" alt="정보처리기사 실기">
+                          <div class="card-body">
+                            <h6 class="card-title">정보처리기사 실기</h6>
+                            <p class="card-text">#자격증 #정보처리기사 #실기</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/gongyu.png" class="card-img-top" alt="화면공유 자율 학습방">
+                          <div class="card-body">
+                            <h6 class="card-title">화면공유 자율 학습방</h6>
+                            <p class="card-text">#자율</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/pythongicho.png" class="card-img-top" alt="python 기초 공부">
+                          <div class="card-body">
+                            <h6 class="card-title">python 기초 공부</h6>
+                            <p class="card-text">#python #기초 #스터디</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/codingtest.jpeg" class="card-img-top" alt="코딩 테스트 스터디">
+                          <div class="card-body">
+                            <h6 class="card-title">코딩 테스트 스터디</h6>
+                            <p class="card-text">#코딩테스트 #스터디</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id="menu1" class="tab-pane block fade"><br>
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/excelmacro.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h6 class="card-title">Excel Macro만들기</h6>
+                            <p class="card-text">#excel</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/javagame.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h6 class="card-title">Java로 게임 만들기</h6>
+                            <p class="card-text">#java #게임</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/ADsP.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h6 class="card-title">ADsP 실기 공부</h6>
+                            <p class="card-text">#자격증 #ADsP</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/datasciencepython.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h6 class="card-title">[Python] 빅데이터 기초</h6>
+                            <p class="card-text">#python #빅데이터 #기초</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id="menu2" class="tab-pane fade"><br>
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/sunggohan.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h6 class="card-title">2022 숭고한 연합 알고리즘 콘테스트</h6>
+                            <p class="card-text">#대회 #알고리즘 #콘테스트</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/gahee.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h6 class="card-title">가희와 함께 하는 3회 코딩테스트</h6>
+                            <p class="card-text">#대회 #코딩테스트</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/imcoder.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h6 class="card-title">나는코더다 2021 송년대회</h6>
+                            <p class="card-text">#대회 #코딩대회</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col mb-4">
+                      <a href="#">
+                        <div class="card">
+                          <img src="img/02_home/inu.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h6 class="card-title">INU 코드페스티벌 2021</h6>
+                            <p class="card-text">#대회 #코딩페스티벌 #INU </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="coding.html" class="mx-auto small rounded-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+                <p class="d-inline">더 많은 스터디 보러가기</p>
+              </a>
+            </div><!-- row -->
+          </div>
+        </section><!-- study section -->
+
+        <!------------------ universities ------------------>
+        <section class="universities d-none d-xl-block">
+          <div class="container">
+            <div class="row">
+              <div class="mx-auto text-center">
+                <h1>수천명의 대학생들의 선택</h1>
+                <p>다양한 대학교에서 협찬을 받고있어요</p>
+              </div>
+            </div><!-- row -->
+            <div class="d-flex justify-content-center">
+              <div class="scroller_wrapper">
+                <div id="scroller_roll1" class="scroller_roll1">
+                  <ul>
+                    <li><a href="#" title="harvard"><img src="img/02_home/universities/harvard.webp" height="60" alt="harvard"/></a></li>
+                    <li><a href="#" title="imperial"><img src="img/02_home/universities/imperial.webp" height="60" alt="imperial"/></a></li>
+                    <li><a href="#" title="lse"><img src="img/02_home/universities/lse.webp" height="60" alt="lse"/></a></li>
+                    <li><a href="#" title="mit"><img src="img/02_home/universities/mit.webp" height="60" alt="mit"/></a></li>
+                    <li><a href="#" title="oxford"><img src="img/02_home/universities/oxford.webp" height="60" alt="oxford"/></a></li>
+                    <li><a href="#" title="princeton"><img src="img/02_home/universities/princeton.webp" height="60" alt="princeton"/></a></li>
+                  </ul>
+                  <div style="clear: both"></div>
+                </div>
+                <div id="scroller_roll2" class="scroller_roll2">
+                  <ul>
+                    <li><a href="#" title="cambridge"><img src="img/02_home/universities/cambridge.webp" height="60" alt="cambridge"/></a></li>
+                    <li><a href="#" title="cornell"><img src="img/02_home/universities/cornell.webp" height="60" alt="cornell"/></a></li>
+                    <li><a href="#" title="melbourne"><img src="img/02_home/universities/melbourne.webp" height="60" alt="melbourne"/></a></li>
+                    <li><a href="#" title="stanford"><img src="img/02_home/universities/stanford.webp" height="60" alt="stanford"/></a></li>
+                    <li><a href="#" title="toronto"><img src="img/02_home/universities/toronto.webp" height="60" alt="toronto"/></a></li>
+                    <li><a href="#" title="yale"><img src="img/02_home/universities/yale.webp" height="60" alt="yale"/></a></li>
+                  </ul>
+                  <div style="clear: both"></div>
+                </div>
+              </div>
+            </div><!-- container -->
+          </section>
+
+
+
+          <!------------------ footer ------------------>
+          <footer>
+            <hr>
+            <div class="container">
+              <div class="row justify-content-space-around">
+                <div class="col">
+                  <div>
+                    <h4 class="mb-4 text-sm leading-5 font-semibold tracking-wider text-gray">(주)구루미</h4>
+                    <span>주소: 서울특별시 강남구 선릉로 112길 34 (삼성동, HS빌딩)</span>
+                    <br>
+                    <span>이메일: hello@gooroomee.com</span>
+                    <br>
+                    <span>대표전화: 1833-9229</span>
+                    <br>
+                    <span>대표이사: 이랑혁</span>
+                    <br>
+                    <span>사업자등록번호: 165-87-00161</span>
+                    <br>
+                    <span>통신판매업 신고번호: 2016-성남분당-0194</span>
+                  </div>
+                </div>
+                <div class="col align-self-end">
+                  <span>Copyrights 2018.Gooroomee All Rights Reserved</span>
+                </div>
+              </div>
+            </div><!-- footer container -->
+          </footer>
+
+
+        </div><!-- container-fluid myAffix -->
+
+        <script>
+          $(function(){
+            $("#scroller_roll1").scroller_roll1({
+                    title_show: 'disable',//enable  disable
+                    time_interval: '30',
+                    window_background_color: "none",
+                    window_padding: '1',
+                    border_size: '0',
+                    border_color: '#0099CC',
+                    images_width: '250',
+                    images_height: '70',
+                    images_margin: '25',
+                    show_count: '4'
+                  });
+            $("#scroller_roll2").scroller_roll2({
+                    title_show: 'disable',//enable  disable
+                    time_interval: '30',
+                    window_background_color: "none",
+                    window_padding: '1',
+                    border_size: '0',
+                    border_color: '#0099CC',
+                    images_width: '250',
+                    images_height: '70',
+                    images_margin: '25',
+                    show_count: '4'
+                  });
+            function addFunc(){
+              alert('test');
+              var url = "coding.html";
+              $(location).attr('href',url);
+            }
+            // $('body').scrollspy({ target: '#navbar' })
+          })
+        </script>
+
+
+      </body>
+      </html>

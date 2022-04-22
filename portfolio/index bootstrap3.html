@@ -1,0 +1,320 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    
+    <title>portfolio_step01</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@500&display=swap');
+
+        body{
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: 20px;
+        }
+        nav{
+          font-size: 15px;
+        }
+        .navbar-brand{
+          padding-top: 5px;
+        }
+        .carousel-inner{
+          position: relative;
+        }
+        .btn{
+          background-color: #51A9FE;
+          border: none;
+        }
+        .btn:hover, .btn:active{
+          background-color: #1f90ff;
+          box-shadow: 4px 8px 20px rgb(0 0 0 / 20%);
+          color: white;
+        }
+        #GooroomStudy{
+          position: absolute;
+          z-index: 1;
+          background-color: #51A9FE;
+          font-size: 25px;
+          font-weight: bold;
+          height: 75px;
+          line-height: 60px;
+          border-radius: 20px;
+        }
+        #GooroomStudy a{
+          color: white;
+          text-decoration: none;
+        }
+        #GooroomStudy:hover, #GooroomStudy:active {
+          background-color: #1f90ff;
+          box-shadow: 4px 8px 20px rgb(0 0 0 / 20%);
+          color: white;
+        }
+        .carousel-inner{
+          border: 1px solid red;
+          height: auto;
+        }
+        @media (min-width: 769px) {
+          #GooroomStudy {
+            top: 70%;
+          }
+        }
+        @media (max-width: 768px) {
+          #GooroomStudy {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            border-radius: 0px;
+          }
+        }
+
+
+
+
+
+        .section-1{
+          background: url(img/01_index/section-text-1.jpg) center no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+        }
+        .section-1 .text-1{
+          margin: 50px 0;
+        }
+
+        #study>div>div{
+          height: 300px;
+          transition: 1s;
+        }
+        #study>div>div a{
+          height: 300px;
+          display: block;
+          text-indent: -9999px;
+        }
+        #study>div:nth-child(1)>div{
+          background: url(img/01_index/html5_logo.png) center no-repeat;
+          background-size: 80%;
+        }
+        #study>div:nth-child(2)>div{
+          background: url(img/01_index/css3_logo.png) center no-repeat;
+          background-size: 80%;
+        }
+        #study>div:nth-child(3)>div{
+          background: url(img/01_index/JS.png) center no-repeat;
+          background-size: 80%;
+        }
+        #study>div:nth-child(4)>div{
+          background: url(img/01_index/Java.png) center no-repeat;
+          background-size: 80%;
+        }
+        #study>div:nth-child(5)>div{
+          background: url(img/01_index/python.png) center no-repeat;
+          background-size: 80%;
+        }
+        #study>div:nth-child(6)>div{
+          background: url(img/01_index/MongoDB.png) center no-repeat;
+          background-size: 80%;
+        }
+
+
+
+        #study>div>div:hover{
+          background-size: 90%;
+        }
+        #study>div>div:hover:after{
+          opacity: 0.5;
+          color: white;
+          cursor: pointer;
+          content: attr(data-text);/*data-text를 넣겠다*/
+        }
+        footer{
+          padding-bottom: 300px;
+        }
+
+
+      </style>
+    </head>
+    <body>
+      <div class="container-fluid" id="myAffix">
+
+        <!------------------ 네비게이션 ------------------>
+        <div class="row">
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="GooroomeeCode" width="90px"><span class="sr-only">Gooroomee</span></a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#home">홈<span class="sr-only">(current)</span></a></li>
+                  <li><a href="#study">스터디<span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">공부기록k</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">공부 기록</a></li>
+                  <li><a href="login.html">로그인</a></li>
+                  <li><a href="login.html">회원가입</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용 가이드 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">가입/로그인</a></li>
+                      <li><a href="#">스터디 시작</a></li>
+                      <li><a href="#">구룸 결제</a></li>
+                      <li><a href="#">자주묻는 질문</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">1:1 상담문의</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+          </nav>
+        </div><!-- row 네비게이션 -->
+
+        <!------------------ 캐로셀 ------------------>
+        <div class="row" id="home">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div id="GooroomStudy" class="col-sm-2 col-sm-offset-5 col-xs-12 text-center btn btn-default"><a href="#">입장하기</a></div>
+              <div class="item active">
+                <img src="img/01_index/carousel01.jpg" alt="...">
+              </div>
+              <div class="item">
+                <img src="img/01_index/carousel02.jpg" alt="...">
+              </div>
+              <div class="item">
+                <img src="img/01_index/carousel03.jpg" alt="...">
+              </div>
+
+            </div>
+
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div><!-- 캐로셀 -->
+        </div><!-- row 캐로셀 -->
+
+        <!------------------ section-1 ------------------>
+        <div class="section-1 text-center">
+          <div class="container">
+            <div class="row text-center text-1">
+              <h1>이제 혼자하지 마세요</h1>
+              <h1>원하는 스터디에 참여하세요</h1>
+            </div>
+            <div class="text-1">
+              <p>구루미에는 다양한 주제 스터디가 운영되고 있어요</p>
+              <p>함께 공부할 스터디 친구를 만나보세요</p>
+            </div>
+
+            <!-- 스터디 종류 -->
+            <div class="row" id="study">
+              <div class="col-xs-6 col-md-4">
+                <div data-text="html"><a href="htmlstudy.index">입장하기</a></div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div data-text="css3"><a href="css3study.index">입장하기</a></div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div data-text="js"><a href="jsstudy.index">입장하기</a></div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div data-text="java"><a href="javastudy.index">입장하기</a></div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div data-text="python"><a href="pythonstudy.index">입장하기</a></div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div data-text="MongoDB"><a href="MongoDBstudy.index">입장하기</a></div>
+              </div>
+
+            </div><!-- row study -->
+
+
+          </div><!-- section-1 container -->
+        </div><!-- section-1 -->
+
+        <!------------------ footer ------------------>
+        <footer>
+          <hr>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <h4>(주)구루미</h4>
+                주소: 서울특별시 강남구 선릉로 112길 34 (삼성동, HS빌딩)
+                <br>
+                이메일: hello@gooroomee.com
+                <br>
+                대표전화: 1833-9229
+                <br>
+                대표이사: 이랑혁
+                <br>
+                사업자등록번호: 165-87-00161
+                <br>
+                통신판매업 신고번호: 2016-성남분당-0194
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+              Copyrights 2018.Gooroomee All Rights Reserved
+            </div>
+          </div><!-- footer container -->
+        </footer>
+
+
+      </div><!-- container-fluid myAffix -->
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+
+
+      <script>
+       $('#myAffix').affix({
+        offset: {
+          top: 200,
+          bottom: function () {
+            return (this.bottom = $('.footer').outerHeight(true))
+          }
+        }
+      }) 
+    </script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </body>
+  </html>

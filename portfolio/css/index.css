@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@500&display=swap');
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+}
+/*------------------ customizing CSS ------------------*/
+
+
+
+
+
+/*------------------ 캐로셀 ------------------*/
+
+.row#home{
+  margin-top: 0;
+  padding-top: 0;
+}
+.carousel-inner{
+  position: relative;
+}
+.btn{
+  background-color: #51A9FE;
+  border: none;
+}
+.btn:hover, .btn:active{
+  background-color: #1f90ff;
+  box-shadow: 4px 8px 20px rgb(0 0 0 / 20%);
+  color: white;
+}
+#GooroomStudy{
+  position: absolute;
+  z-index: 1;
+  background-color: #51A9FE;
+  font-size: 25px;
+  font-weight: bold;
+  height: 75px;
+  line-height: 60px;
+  border-radius: 20px;
+}
+#GooroomStudy{
+  color: white;
+}
+#GooroomStudy:hover, #GooroomStudy:active {
+  background-color: #1f90ff;
+  box-shadow: 4px 8px 20px rgb(0 0 0 / 20%);
+  color: white;
+}
+.carousel-inner{
+  height: auto;
+}
+
+/*------------------ section-1 ------------------*/
+.section-1{
+  background: url(../img/01_index/section-text-1.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 40px 0;
+}
+.section-1 .text-1{
+  margin: 50px 0;
+}
+
+#study>div>div{
+  height: 300px;
+  transition: 0.3s;
+  text-indent: -9999px;
+}
+#study>div:nth-child(1)>div{
+  background: url(../img/01_index/html5_logo.png) center no-repeat;
+  background-size: 80%;
+}
+#study>div:nth-child(2)>div{
+  background: url(../img/01_index/css3_logo.png) center no-repeat;
+  background-size: 80%;
+}
+#study>div:nth-child(3)>div{
+  background: url(../img/01_index/JS.png) center no-repeat;
+  background-size: 80%;
+}
+#study>div:nth-child(4)>div{
+  background: url(../img/01_index/Java.png) center no-repeat;
+  background-size: 80%;
+}
+#study>div:nth-child(5)>div{
+  background: url(../img/01_index/python.png) center no-repeat;
+  background-size: 80%;
+}
+#study>div:nth-child(6)>div{
+  background: url(../img/01_index/MongoDB.png) center no-repeat;
+  background-size: 80%;
+}
+
+
+
+#study>div>div:hover{
+  background-size: 90%;
+}
+#study>div>div:hover:after{
+  opacity: 0.5;
+  color: white;
+  cursor: pointer;
+  content: attr(data-text);/*data-text를 넣겠다*/
+}
+/*------------------ section-2 ------------------*/
+.section-2{
+  background: url(../img/01_index/section-text-1.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 30px 0;
+}
+/*.section-2 .container h1{
+  position: relative;
+  top: 200px;
+  z-index: 99;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #51A9FE;
+}*/
+.section-2 .text-1{
+  margin: 50px 0;
+}
+.section-2>.container>div>p{
+  font-size: 4em;
+}
+
+/*------------------ footer ------------------*/
+footer{
+  padding-bottom: 300px;
+  color: gray;
+
+}
+footer span{
+  font-size: 10px;
+}
+
+
+/*------------------ mediaquery ------------------*/
+@media (max-width: 767.98px) {
+  #GooroomStudy {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 0px;
+  }
+  .section-1 h1, .section-2 h1{
+    font-size: 35px;
+  }
+  #study>div>div{
+  height: 200px;
+  }
+}
+@media (min-width: 768px) {
+  #GooroomStudy {
+    top: 70%;
+    width: 20%;
+  }
+}
+@media (max-width: 991.98px) {
+  nav{
+    height: 80px;
+  }
+  .navbar-brand{
+    margin-left: 50%
+  }
+}

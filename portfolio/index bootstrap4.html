@@ -1,0 +1,402 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <title>index</title>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@500&display=swap');
+
+      body{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 20px;
+      }
+      /*------------------ customizing CSS ------------------*/
+
+
+
+
+
+      /*------------------ 캐로셀 ------------------*/
+
+      .row#home{
+        margin-top: 0;
+        padding-top: 0;
+      }
+      .carousel-inner{
+        position: relative;
+      }
+      .btn{
+        background-color: #51A9FE;
+        border: none;
+      }
+      .btn:hover, .btn:active{
+        background-color: #1f90ff;
+        box-shadow: 4px 8px 20px rgb(0 0 0 / 20%);
+        color: white;
+      }
+      #GooroomStudy{
+        position: absolute;
+        z-index: 1;
+        background-color: #51A9FE;
+        font-size: 25px;
+        font-weight: bold;
+        height: 75px;
+        line-height: 60px;
+        border-radius: 20px;
+      }
+      #GooroomStudy{
+        color: white;
+      }
+      #GooroomStudy:hover, #GooroomStudy:active {
+        background-color: #1f90ff;
+        box-shadow: 4px 8px 20px rgb(0 0 0 / 20%);
+        color: white;
+      }
+      .carousel-inner{
+        height: auto;
+      }
+      @media (max-width: 767.98px) {
+        #GooroomStudy {
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+          border-radius: 0px;
+        }
+        .section-1 h1, .section-2 h1{
+          font-size: 35px;
+        }
+      }
+      @media (min-width: 768px) {
+        #GooroomStudy {
+          top: 70%;
+          width: 20%;
+        }
+      }
+      @media (max-width: 991.98px) {
+        nav{
+          height: 80px;
+        }
+        .navbar-brand{
+          margin-left: 50%
+        }
+      }
+
+      /*------------------ section-1 ------------------*/
+      .section-1{
+        background: url(img/01_index/section-text-1.jpg) center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 40px 0;
+      }
+      .section-1 .text-1{
+        margin: 50px 0;
+      }
+
+      #study>div>div{
+        height: 300px;
+        transition: 1s;
+      }
+      #study>div>div a{
+        height: 300px;
+        display: block;
+        text-indent: -9999px;
+      }
+      #study>div:nth-child(1)>div{
+        background: url(img/01_index/html5_logo.png) center no-repeat;
+        background-size: 80%;
+      }
+      #study>div:nth-child(2)>div{
+        background: url(img/01_index/css3_logo.png) center no-repeat;
+        background-size: 80%;
+      }
+      #study>div:nth-child(3)>div{
+        background: url(img/01_index/JS.png) center no-repeat;
+        background-size: 80%;
+      }
+      #study>div:nth-child(4)>div{
+        background: url(img/01_index/Java.png) center no-repeat;
+        background-size: 80%;
+      }
+      #study>div:nth-child(5)>div{
+        background: url(img/01_index/python.png) center no-repeat;
+        background-size: 80%;
+      }
+      #study>div:nth-child(6)>div{
+        background: url(img/01_index/MongoDB.png) center no-repeat;
+        background-size: 80%;
+      }
+
+
+
+      #study>div>div:hover{
+        background-size: 90%;
+      }
+      #study>div>div:hover:after{
+        opacity: 0.5;
+        color: white;
+        cursor: pointer;
+        content: attr(data-text);/*data-text를 넣겠다*/
+      }
+      /*------------------ section-2 ------------------*/
+      .section-2{
+        background: url(img/01_index/section-text-1.jpg) center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 30px 0;
+      }
+      .section-2 .text-1{
+        margin: 50px 0;
+      }
+      .section-2>.container>p{
+        font-size: 4em;
+      }
+
+      /*------------------ footer ------------------*/
+      footer{
+        padding-bottom: 300px;
+        color: gray;
+
+      }
+      footer span{
+        font-size: 10px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" id="myAffix">
+
+      <!------------------ section-2 ------------------>
+      <div class="section-2 text-center" id="section-2">
+        <div class="container">
+          <div class="row text-1 d-block">
+            <h1>직장인을 위한 구루미 코딩</h1>
+            <br>
+            <h1>정해진 시간에 열려요</h1>
+          </div>
+          <div class="text-1">
+            <p>홈페이지에서 시간을 관리하고 있어요</p>
+            <p>저녁 7시부터 밤 11시 사이에 만나요</p>
+          </div>
+          <p>
+            <span>00</span>:
+            <span>00</span>:
+            <span>00</span>
+          </p>
+        </div><!-- section-2 container -->
+      </div><!-- section-2 -->
+
+
+
+
+
+      <!------------------ 캐로셀 ------------------>
+      <div class="row" id="home">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="d-flex align-items-center flex-column">
+              <button id="GooroomStudy"  data-toggle="modal" data-target="#exampleModal" class="mx-auto text-center btn">입장하기</button>
+            </div>
+            <div class="carousel-item active">
+              <img src="img/01_index/carousel01.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/01_index/carousel02.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/01_index/carousel03.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </button>
+        </div><!-- 캐로셀 -->
+      </div><!-- row 캐로셀 -->
+
+
+
+
+
+      <!------------------ section-1 ------------------>
+      <div class="section-1 text-center" id="section-1">
+        <div class="container">
+          <div class="row text-1 d-block">
+            <h1>이제 혼자하지 마세요</h1>
+            <br>
+            <h1>원하는 스터디에 참여하세요</h1>
+          </div>
+          <div class="text-1">
+            <p>구루미에는 다양한 주제 스터디가 운영되고 있어요</p>
+            <p>함께 공부할 스터디 친구를 만나보세요</p>
+          </div>
+
+          <!-- 스터디 종류 -->
+          <div class="row" id="study">
+            <div class="col-6 col-md-4">
+              <div data-text="html"><a href="htmlstudy.index">입장하기</a></div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div data-text="css3"><a href="css3study.index">입장하기</a></div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div data-text="js"><a href="jsstudy.index">입장하기</a></div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div data-text="java"><a href="javastudy.index">입장하기</a></div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div data-text="python"><a href="pythonstudy.index">입장하기</a></div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div data-text="MongoDB"><a href="MongoDBstudy.index">입장하기</a></div>
+            </div>
+
+          </div><!-- row study -->
+
+
+        </div><!-- section-1 container -->
+      </div><!-- section-1 -->
+
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- <h5 class="modal-title" id="exampleModalLabel"></h5> -->
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center h6">
+              저녁 7시부터 밤 11시 사이에 만나요
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+              <button type="button" class="btn btn-primary">문의하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!------------------ footer ------------------>
+      <footer>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <div>
+                <h4 class="mb-4 text-sm leading-5 font-semibold tracking-wider text-gray">(주)구루미</h4>
+                <span>주소: 서울특별시 강남구 선릉로 112길 34 (삼성동, HS빌딩)</span>
+                <br>
+                <span>이메일: hello@gooroomee.com</span>
+                <br>
+                <span>대표전화: 1833-9229</span>
+                <br>
+                <span>대표이사: 이랑혁</span>
+                <br>
+                <span>사업자등록번호: 165-87-00161</span>
+                <br>
+                <span>통신판매업 신고번호: 2016-성남분당-0194</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 align-self-end">
+              <span>Copyrights 2018.Gooroomee All Rights Reserved</span>
+            </div>
+          </div>
+        </div><!-- footer container -->
+      </footer>
+
+
+    </div><!-- container-fluid myAffix -->
+
+    <script>
+      $(function(){
+
+        var txt = $(".section-2 p span"); 
+        var btn = $("#GooroomStudy");
+        var modal = $(".modal");
+         modal.hide();
+
+        var section2 = $(".section-2 .container");
+          section2.hide();
+        
+
+        var clock = setInterval(function(){
+          var now = new Date();
+          var hour = now.getHours();
+          var minute = now.getMinutes();
+          var second = now.getSeconds();
+
+          if (hour<10) {
+            hour = "0"+hour;
+          }
+          if (minute<10) {
+            minute = "0"+minute;
+          }
+          if (second<10) {
+            second = "0"+second;
+          }
+
+          txt.eq(0).text(hour);
+          txt.eq(1).text(minute);
+          txt.eq(2).text(second);
+
+          
+          if (hour>0 && hour<24) {
+            btn.off().on('click',function(){
+              // alert("환영합니다");
+              var url = "home.html";
+              $(location).attr('href',url);
+            })
+          } else {
+            section2.show();
+            btn.off().on('click',function(){
+              modal.show();
+            })
+          }
+        },100)
+
+      })
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  -->
+</body>
+</html>
